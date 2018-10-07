@@ -2,7 +2,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as SockJs from 'sockjs-client';
 
-const socket = new SockJs('http://35.205.244.201:9999');
+const socket = new SockJs('http://35.187.181.25:31132');
+
+socket.onopen = function() {
+  console.log('open');
+  socket.send('test');
+};
 
 class App extends React.Component {
   state = {
