@@ -6,7 +6,6 @@ const socket = new SockJs('http://35.187.181.25:31132');
 
 socket.onopen = function() {
   console.log('open');
-  socket.send('test');
 };
 
 class App extends React.Component {
