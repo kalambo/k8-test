@@ -14,7 +14,7 @@ class App extends React.Component {
       this.setState({ current: e.data });
     };
   }
-  onChange = value => this.setState({ value });
+  onChange = e => this.setState({ value: e.target.value });
   onClick = () => {
     socket.send(this.state.value);
   };
